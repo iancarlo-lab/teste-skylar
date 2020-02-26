@@ -21,7 +21,6 @@ db.once("open", function(){
     console.log("Conexao exitosa com MongoDB")
 });
 
-app.use("/dashboard", dashboard);
 
 //Validacao para deployment em Heroku
 if(process.env.NODE_ENV === 'production'){
@@ -32,6 +31,7 @@ if(process.env.NODE_ENV === 'production'){
     });
 };
 
+app.use("/dashboard", dashboard);
 
 
 port = process.env.PORT || 8080;
