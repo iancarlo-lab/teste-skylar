@@ -80,20 +80,6 @@ export default class ListaUsuarios extends Component {
                   ) : (
                              contatos.length > 0  ? 
                              (
-                                 <div>
-                                 <Card className="text-center card-style-render">
-                                    <Card.Header>Atenção</Card.Header>
-                                    <Card.Body>
-                                        <Card.Title>Sem contatos no banco de dados</Card.Title>
-                                        <Card.Text>
-                                            Deseja adicionar um novo contato?
-                                        </Card.Text>
-                                        <Link to="/adicionar" className="btn btn-dark">Adicionar</Link>
-                                    </Card.Body>
-                                    <Card.Footer className="text-muted">Skylar IA</Card.Footer>
-                                    </Card>
-                                </div>
-                             ) : (
                                 <CSSTransition
                                     in={true}
                                     appear={true}
@@ -115,6 +101,21 @@ export default class ListaUsuarios extends Component {
                                         </tbody>
                                     </Table>
                                 </CSSTransition>
+                             ) : (
+                                
+                                <div>
+                                 <Card className="text-center card-style-render">
+                                    <Card.Header>Atenção</Card.Header>
+                                    <Card.Body>
+                                        <Card.Title>Sem contatos no banco de dados</Card.Title>
+                                        <Card.Text>
+                                            Deseja adicionar um novo contato?
+                                        </Card.Text>
+                                        <Link to="/adicionar" className="btn btn-dark">Adicionar</Link>
+                                    </Card.Body>
+                                    <Card.Footer className="text-muted">Skylar IA</Card.Footer>
+                                    </Card>
+                                </div>
                              )
                         )}
             </div>
