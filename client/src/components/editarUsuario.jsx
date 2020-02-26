@@ -72,7 +72,11 @@ export default class EditarUsuario extends Component {
                     alert(res.data)
                 } else{
                     alert("Editado correctamente" );
-                    window.location = '/usuarios';
+                    this.setState({
+                        nome: '',
+                        email: '',
+                        telefone: ''
+                     });
                 }
             })
             .catch(error => {

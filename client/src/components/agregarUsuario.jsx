@@ -81,8 +81,12 @@ export default class AdicionarUsuario extends Component {
                 if(res.data === "Padrão de email inválido!"){
                     alert("Padrão de email inválido!")
                 } else{
-                    alert("Usuario adicionado")
-                    window.location = 'https://teste-skylar.herokuapp.com/usuarios'
+                    alert("Usuario adicionado");
+                    this.setState({
+                        nome: '',
+                        email: '',
+                        telefone: ''
+                    });
                 }
                 })
             .catch(error => alert(error));
