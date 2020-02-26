@@ -78,7 +78,7 @@ export default class ListaUsuarios extends Component {
              {(!done  ) ? (
                  <Loading />
                   ) : (
-                             (contatos.length ) ? 
+                             (contatos.length > 0 ) ? 
                              (
                                  <div>
                                  <Card className="text-center card-style-render">
