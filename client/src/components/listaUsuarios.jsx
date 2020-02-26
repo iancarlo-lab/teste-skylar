@@ -38,7 +38,7 @@ export default class ListaUsuarios extends Component {
             done: false
         })
         setTimeout(() => {
-            axios.get('/dashboard')
+            axios.get('/dashboard/usuarios')
             .then(response => {
                 console.log(response.data);
                 this.setState({

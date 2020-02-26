@@ -4,7 +4,7 @@ var validator = require("email-validator");
  
 
 
-router.route('/').get((req, res) => {
+router.route('/usuarios').get((req, res) => {
     User.find()
         .then(usuarios => res.json(usuarios))
         .catch(error => res.status(400).json("Error: " + error))
