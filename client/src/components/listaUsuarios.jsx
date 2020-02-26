@@ -69,14 +69,16 @@ export default class ListaUsuarios extends Component {
 
 
     render(){
-        const {done} = this.state
+        const {done} = this.state;
+        const {contatos} = this.state;
         return(
             <div className="contatos-container">
              <h3 className="contatos-title">Contatos</h3>
              {(!done  ) ? (
-                        <Loading />
-                         ) : (
-                             this.state.contatos.length === 0 ? (
+                 <Loading />
+                  ) : (
+                             contatos.length === 0 ? 
+                             (
                                  <div>
                                  <Card className="text-center card-style-render">
                                     <Card.Header>Atenção</Card.Header>
