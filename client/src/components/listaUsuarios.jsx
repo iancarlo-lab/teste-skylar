@@ -40,6 +40,7 @@ export default class ListaUsuarios extends Component {
         setTimeout(() => {
             axios.get('/dashboard')
             .then(response => {
+                console.log(response.data);
                 this.setState({
                     contatos: response.data,
                     done: true

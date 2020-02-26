@@ -85,8 +85,7 @@ export default class AdicionarUsuario extends Component {
                     window.location = '/usuarios'
                 }
                 })
-            .catch(error => 
-                alert(error));
+            .catch(error => alert(error));
     }
 
     render(){
